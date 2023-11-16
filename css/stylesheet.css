@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0%;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  overflow: hidden;
+}
+
+/* ************************************Header starts here************************************** */
+
+header {
+  display: flex;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  background-color: #46d7ac;
+}
+
+/* *********************************** section starts here*************************************** */
+
+section {
+  width: 100%;
+  display: block;
+  overflow: auto;
+  min-height: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.outer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.formDetail {
+  border-right: 2px solid #46d7ac;
+}
+
+.formOutput {
+  min-height: 50%;
+}
+.formDetail,
+.formOutput {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.formDetail {
+  max-height: 20%;
+}
+
+/* ************************************form css************************************************ */
+/* Style inputs, select elements and textareas */
+input[type="text"],
+select,
+textarea {
+  width: 80%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+  margin-top: 2%;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 5px 5px 5px 0;
+  display: inline-block;
+}
+
+/* Style the container */
+.container {
+  border-radius: 5px;
+  /* background-color: #f2f2f2; */
+  padding: 20px;
+  width: 80%;
+  height: auto;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 7px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 4px;
+}
+
+.gender,
+.Skills {
+  float: left;
+  width: 75%;
+  margin-top: 1.5%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 703px) {
+  .col-25,
+  .col-75,
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 988px) {
+  .formDetail {
+    border-right: none;
+    border-bottom: 2px solid #46d7ac;
+  }
+}
+
+/* ********************************second div************************** */
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.studentsList {
+  width: 100%;
+}
+tr:nth-child(even),
+table.list thread > tr {
+  background-color: rgba(235, 242, 211, 255);
+}
+table {
+  border-collapse: collapse;
+  padding: 1px;
+  width: 80%;
+  height: 10%;  
+}
+tr,
+td {
+  border: 2px solid #dbe25c;
+  padding: 5px;
+  animation: fadeInAnimation ease 2s;
+}
+.enrolled {
+  margin-bottom: 4%;
+  display: block;
+  width: 100%;
+}
+.ifr {
+  position: absolute;
+  overflow: scroll;
+  width: 95%;
+  height: 53vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/* ************************************footer************************************************ */
+
+footer {
+  height: 5vh;
+  width: 100%;
+  border: 1px solid black;
+  background-color: rgb(60, 196, 150);
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
